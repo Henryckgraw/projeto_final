@@ -1,0 +1,39 @@
+.card{
+	
+	.nav{
+		flex-direction: column;
+		@include media-breakpoint-up('lg') {
+			flex-direction: row;
+			.nav-item{
+				margin-right: .5em;
+			}
+		}
+	}
+
+	&.contractors {
+		.card-block {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			.fa{
+				font-size: 5rem;
+			}
+		}
+		.card-footer{
+			display: flex;
+			justify-content: space-between;
+			.item{
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				font-size: 1.3rem;
+				.warning{
+					color: $brand-warning;
+				}
+				.info{
+					color: $brand-info;
+				}
+			}
+		}
+	}
+}

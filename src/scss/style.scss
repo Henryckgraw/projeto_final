@@ -1,0 +1,61 @@
+@import "../components/bootstrap/scss/bootstrap";
+@import "../components/components-font-awesome/scss/font-awesome";
+
+.row{
+	@include make-row;
+}
+
+
+
+.row{
+	.no-gutters {
+	    margin-right: 0;
+	    margin-left: 0;
+
+	    > .col,
+	    > [class*="col-"] {
+	      padding-right: 0;
+	      padding-left: 0;
+	    }
+	}
+}
+
+// sidebar
+@import "sidebar";
+
+// header
+@import "header";
+
+// card_custom
+@import "card_custom";
+
+// badge
+@import "badged";
+
+.container{ width: 100%; }
+
+.coluna-4,
+.coluna-8 {
+	width: 100%;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+@include media-breakpoint-up('sm') {
+	.coluna-4{
+		//@extend .col-sm-4; // Bootstrap (grid)
+		@include make-col-project(4);
+	}
+
+	.coluna-8{
+		//@extend .col-sm-8; // Bootstrap (grid)
+		@include make-col-project(8);
+	}
+}
+
+@include media-breakpoint-up('lg') {
+	.container{
+		width: 88%;
+		margin-left: 200px;
+	}
+}
